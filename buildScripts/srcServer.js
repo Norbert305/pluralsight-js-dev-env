@@ -1,11 +1,18 @@
 var express = require('express');
 var path = require('path');
 var open = require('open');
+// import webpack from "webpack";
+// import config from "../webpack.config.dev";
+
+
 
 var port = 3000;
 
 var app = express();
 
+// app.use(require('webpack-dev-middleware')(compiler, {
+//     publicPath: config.output.publicPath
+// }));
 
 //requesting the root and sending the specified file to local
 app.get('/', function(req,res) {
