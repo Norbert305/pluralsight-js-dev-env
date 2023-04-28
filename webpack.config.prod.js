@@ -28,4 +28,4 @@ export default {
       {test: /\.css$/, loaders: [MiniCssExtractPlugin.loader,'css-loader']}
     ]
   }
-}
+};
