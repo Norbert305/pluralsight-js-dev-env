@@ -1,12 +1,10 @@
-import webpack from 'webpack';
+import HtmlWebpackPlugin from 'html-webpack-plugin';
 import path from 'path';
 
 export default {
   devtool: 'inline-source-map',
   mode: 'development',
-  entry: [
-    path.resolve(__dirname, 'src/index')
-  ],
+  entry:"./src/index.js",
   target: 'web',
   output: {
     path: path.resolve(__dirname, 'src'),
@@ -14,10 +12,9 @@ export default {
     filename: 'bundle.js'
   },
   plugins: [
-    new webpack.LoaderOptionsPlugin({
-        debug: true,
-        noInfo: false,
-      })
+    new HtmlWebpackPlugin({
+      template: "src/index.html",
+    }),
   ],
   module: {
     rules: [
